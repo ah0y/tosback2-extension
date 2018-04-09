@@ -9,7 +9,7 @@
         "default_popup": "popup.html"
     },
     "permissions": [
-        "http://localhost:3000/*",
+        "https://nice-bobcat-18.localtunnel.me/*",
         "tabs"
     ],
     

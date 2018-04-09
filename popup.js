@@ -1,19 +1,19 @@
 
 $(document).ready(function () {
   console.log('loaded');
-  var test = "";
-  var url =
+  var tabHost = "";
+  var tab =
     chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
-      test = test + tabs[0].url
+      tabHost = tabHost + tabs[0].url
       return tabs[0].url
     });
-  $.ajax(url).done(function () {
-    var px = test.split(/^(?:http(?:s)?:\/\/)?(?:www.)?/)[1]
-    console.log(px)
-    var settings = {
+  $.ajax(tab).done(function () {
+    var activeTab = tabHost.split(/^(?:http(?:s)?:\/\/)?(?:www.)?/)[1].split('/')[0]
+    console.log(activeTab)
+    var request = {
       "async": true,
       "crossDomain": true,
-      "url": "http://localhost:3000/tasks",
+      "url": "https://nice-bobcat-18.localtunnel.me/tasks/",
       "method": "POST",
       "headers": {
         "Content-Type": "application/x-www-form-urlencoded",
@@ -22,16 +22,16 @@ $(document).ready(function () {
         "Postman-Token": "bb724e1b-2b11-45b4-a27e-5441875aa9d6"
       },
       "data": {
-        "name": px
+        "name": activeTab
       }
     }
-    $.ajax(settings).done(function (response) {
+    $.ajax(request).done(function (response) {
       console.log(response)
-      var add = response.commit 
-      document.getElementById('here').href = document.getElementById('here').href + add
+      var resource = response.commit 
+      document.getElementById('here').href = document.getElementById('here').href + resource
       // document.getElementsByClassName("response")[0].innerText = response.commit
       document.getElementsByClassName("modified")[0].innerText = response.filename
-      console.log(add)
+      console.log(resource)
     })
   })
 }
