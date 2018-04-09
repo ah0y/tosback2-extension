@@ -1,0 +1,21 @@
+{
+    "name": "TOSback Extension",
+    "version": "1.0",
+    "manifest_version": 2,
+	"background": {
+		"scripts": ["popup.js"]
+	},
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "http://localhost:3000/*",
+        "tabs"
+    ],
+    
+	 "content_security_policy": "script-src 'self' https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js; object-src 'self'"
+    }
+
+
+
+
