@@ -13,7 +13,7 @@ $(document).ready(function () {
     var request = {
       "async": true,
       "crossDomain": true,
-      "url": "https://nice-bobcat-18.localtunnel.me/tasks/",
+      "url": "https://popular-walrus-63.localtunnel.me/tasks/",
       "method": "POST",
       "headers": {
         "Content-Type": "application/x-www-form-urlencoded",
