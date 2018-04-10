@@ -13,7 +13,7 @@ $(document).ready(function () {
     var request = {
       "async": true,
       "crossDomain": true,
-      "url": "https://chatty-snail-21.localtunnel.me/tasks/",
+      "url": "http://bc7f8b18.ngrok.io/tasks",
       "method": "POST",
       "headers": {
         "Content-Type": "application/x-www-form-urlencoded",
