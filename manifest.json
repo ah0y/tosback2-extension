@@ -13,7 +13,7 @@
         "default_title": "TOSback Tracker"
     },
     "permissions": [
-        "https://popular-walrus-63.localtunnel.me/*",
+        "https://chatty-snail-21.localtunnel.me/*",
         "tabs"
     ],
     "content_security_policy": 
