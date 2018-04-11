@@ -30,7 +30,7 @@ $(document).ready(function () {
       var resource = response.commit 
       document.getElementById('here').href = document.getElementById('here').href + resource
       // document.getElementsByClassName("response")[0].innerText = response.commit
-      document.getElementsByClassName("modified")[0].innerText = response.commitDate
+      document.getElementsByClassName("modified")[0].innerText = "TOS changes were last made on: " + response.commitDate
       console.log(resource)
     })
   })
