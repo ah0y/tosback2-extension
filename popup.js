@@ -13,7 +13,7 @@ $(document).ready(function () {
     var request = {
       "async": true,
       "crossDomain": true,
-      "url": "http://bc7f8b18.ngrok.io/tasks",
+      "url": "https://a6700be0.ngrok.io/tasks",
       "method": "POST",
       "headers": {
         "Content-Type": "application/x-www-form-urlencoded",
